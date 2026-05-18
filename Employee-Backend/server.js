@@ -39,7 +39,7 @@ async function connectDB(){
         await connect(process.env.MONGODB_URL);
         console.log("DB Connection success")
         //Start server
-        app.listen(port,()=>console.log("Server listening on port 5000"))
+        app.listen(port,()=>console.log(`Server listening on port ${port}`))
     }catch(err){
         console.log("Error in DB connection: ",err)
     }
