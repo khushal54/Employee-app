@@ -28,7 +28,7 @@ const __dirname = path.dirname(__filename);
 app.use(exp.static(path.join(__dirname, "../employee-frontend/dist")));
 
 // Handle React routes
-app.get("*", (req, res) => {
+app.get("/{*splat}", (req, res) => {
   res.sendFile(path.join(__dirname, "../employee-frontend/dist", "index.html"));
 });
 
